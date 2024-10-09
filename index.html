@@ -482,6 +482,140 @@
                 </script>
                 
                 <!-- قسم التواصل -->
+                <!DOCTYPE html>
+                <html lang="ar">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>معلومات التواصل</title>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f8f9fa;
+                            margin: 0;
+                            padding: 20px;
+                        }
+                
+                        .contact-container {
+                            display: flex;
+                            justify-content: center; /* محاذاة العناصر في المنتصف */
+                            margin-bottom: 20px; /* مسافة أسفل الأيقونات */
+                            padding: 20px;
+                            border: 1px solid #dee2e6; /* إطار حول المستطيل */
+                            border-radius: 10px; /* زوايا دائرية للمستطيل */
+                            background-color: #ffffff; /* لون خلفية المستطيل */
+                        }
+                
+                        .contact-icon {
+                            display: flex;
+                            flex-direction: column; /* توجيه عمودي للنص */
+                            align-items: center;
+                            justify-content: center;
+                            width: 120px; /* عرض الأيقونة */
+                            height: 120px; /* ارتفاع الأيقونة */
+                            color: white; /* لون النص */
+                            text-decoration: none; /* إزالة الخط السفلي */
+                            transition: transform 0.3s ease;
+                            position: relative; /* لتحسين تنسيق النص */
+                            margin: 0 20px; /* مسافة بين الأيقونات */
+                            border-radius: 10px; /* زوايا دائرية */
+                        }
+                
+                        .contact-icon:hover {
+                            transform: scale(1.1); /* تكبير الأيقونة عند التحويم */
+                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* تأثير ظل عند التحويم */
+                        }
+                
+                        .whatsapp {
+                            background-color: #25D366; /* لون واتساب */
+                        }
+                
+                        .email {
+                            background-color: #dc3545; /* لون البريد الإلكتروني */
+                        }
+                
+                        .info-container {
+                            display: flex;
+                            justify-content: center; /* محاذاة العناصر في المنتصف */
+                            margin-top: 20px; /* مسافة أعلى */
+                        }
+                
+                        .info-icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 220px; /* عرض الأيقونة */
+                            height: 60px; /* ارتفاع الأيقونة */
+                            border-radius: 5px; /* زوايا دائرية */
+                            background-color: #e9ecef; /* لون خلفية أيقونة المعلومات */
+                            color: #333; /* لون النص */
+                            margin: 10px; /* مسافة بين الأيقونات */
+                            cursor: pointer; /* تغيير شكل المؤشر عند التحويم */
+                            text-align: center; /* محاذاة النص في المنتصف */
+                            transition: background-color 0.3s ease;
+                            padding: 10px; /* إضافة مسافة داخل الأيقونة */
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل لتبدو مرفوعة قليلاً */
+                        }
+                
+                        .info-icon:hover {
+                            background-color: #ced4da; /* لون الخلفية عند التحويم */
+                        }
+                
+                        .info-icon i {
+                            margin-left: 10px; /* مسافة بين الأيقونة والنص */
+                        }
+                
+                        .info-icon span {
+                            margin-left: 10px; /* مسافة بين الأيقونة والنص */
+                            display: flex;
+                            align-items: center; /* محاذاة النص مع الأيقونة بشكل أفقي */
+                        }
+                    </style>
+                </head>
+                <body>
+                    <!-- Contact-->
+                    <section class="page-section" id="contact">
+                        <div class="container">
+                            <div class="text-center">
+                                <h2 class="mt-0">لنتواصل!</h2>
+                                <hr class="divider" />
+                                <p class="text-muted mb-5">هل أنت مستعد لبدء مشروعك التالي معنا؟ اتصل بنا أو أرسل لنا بريدًا إلكترونيًا وسنعود إليك في أقرب وقت ممكن!</p>
+                            </div>
+                            <div class="contact-container">
+                                <a href="mailto:adshome190@gmail.com" class="contact-icon email">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                    <span>لإرسال بريد إلكتروني</span>
+                                </a>
+                                <a href="https://wa.me/201558276351" target="_blank" class="contact-icon whatsapp">
+                                    <i class="fab fa-whatsapp fa-2x"></i>
+                                    <span>تواصل عبر واتساب</span>
+                                </a>
+                            </div>
+                            <div class="info-container">
+                                <div class="info-icon" onclick="copyToClipboard('adshome190@gmail.com')">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>adshome190@gmail.com</span>
+                                </div>
+                                <div class="info-icon" onclick="copyToClipboard('+20 1558276351')">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>+20 1558276351</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <script>
+                        function copyToClipboard(text) {
+                            navigator.clipboard.writeText(text).then(() => {
+                                alert('تم نسخ النص: ' + text);
+                            }).catch(err => {
+                                console.error('فشل في نسخ النص: ', err);
+                            });
+                        }
+                    </script>
+                </body>
+                </html>
 
             <div class="small text-center text-muted">Copyright &copy; Ads Home 2024</div>
         </div>
